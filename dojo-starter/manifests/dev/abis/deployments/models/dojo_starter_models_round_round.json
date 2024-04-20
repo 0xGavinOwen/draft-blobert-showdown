@@ -169,66 +169,30 @@
   },
   {
     "type": "impl",
-    "name": "playerImpl",
-    "interface_name": "dojo_starter::models::player::Iplayer"
+    "name": "roundImpl",
+    "interface_name": "dojo_starter::models::round::Iround"
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::player::Player",
+    "name": "dojo_starter::models::round::Round",
     "members": [
       {
-        "name": "address",
-        "type": "core::starknet::contract_address::ContractAddress"
+        "name": "duel_id",
+        "type": "core::integer::u128"
       },
       {
-        "name": "blobert_1",
+        "name": "round_number",
         "type": "core::integer::u8"
       },
       {
-        "name": "blobert_2",
+        "name": "state",
         "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_3",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_4",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_5",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_6",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "name",
-        "type": "core::felt252"
-      },
-      {
-        "name": "total_duels",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "total_wins",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "total_losses",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "timestamp",
-        "type": "core::integer::u64"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::player::Iplayer",
+    "name": "dojo_starter::models::round::Iround",
     "items": [
       {
         "type": "function",
@@ -236,7 +200,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::player::Player"
+            "type": "dojo_starter::models::round::Round"
           }
         ],
         "outputs": [],
@@ -246,7 +210,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::player::player::Event",
+    "name": "dojo_starter::models::round::round::Event",
     "kind": "enum",
     "variants": []
   }

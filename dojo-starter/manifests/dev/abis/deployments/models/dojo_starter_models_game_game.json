@@ -169,112 +169,54 @@
   },
   {
     "type": "impl",
-    "name": "blobertImpl",
-    "interface_name": "dojo_starter::models::blobert::Iblobert"
-  },
-  {
-    "type": "enum",
-    "name": "dojo_starter::models::types::Type",
-    "variants": [
-      {
-        "name": "Fire",
-        "type": "()"
-      },
-      {
-        "name": "Water",
-        "type": "()"
-      },
-      {
-        "name": "Grass",
-        "type": "()"
-      },
-      {
-        "name": "Wind",
-        "type": "()"
-      },
-      {
-        "name": "Dark",
-        "type": "()"
-      },
-      {
-        "name": "Light",
-        "type": "()"
-      }
-    ]
+    "name": "gameImpl",
+    "interface_name": "dojo_starter::models::game::Igame"
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::types::BlobertTypes",
+    "name": "dojo_starter::models::game::Game",
     "members": [
       {
-        "name": "blobert_id",
+        "name": "game_id",
+        "type": "core::integer::u128"
+      },
+      {
+        "name": "player_a",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "name": "player_b",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "name": "message",
+        "type": "core::felt252"
+      },
+      {
+        "name": "state",
         "type": "core::integer::u8"
       },
       {
-        "name": "blobert_type",
-        "type": "dojo_starter::models::types::Type"
-      }
-    ]
-  },
-  {
-    "type": "enum",
-    "name": "dojo_starter::models::side_effect::SideEffectType",
-    "variants": [
-      {
-        "name": "Burn",
-        "type": "()"
-      },
-      {
-        "name": "Paralyzed",
-        "type": "()"
-      },
-      {
-        "name": "Frozen",
-        "type": "()"
-      },
-      {
-        "name": "Sleep",
-        "type": "()"
-      },
-      {
-        "name": "Poison",
-        "type": "()"
-      },
-      {
-        "name": "Confusion",
-        "type": "()"
-      },
-      {
-        "name": "Flinch",
-        "type": "()"
-      }
-    ]
-  },
-  {
-    "type": "struct",
-    "name": "dojo_starter::models::blobert::Blobert",
-    "members": [
-      {
-        "name": "blobert_id",
+        "name": "round_number",
         "type": "core::integer::u8"
       },
       {
-        "name": "health",
+        "name": "winner",
         "type": "core::integer::u8"
       },
       {
-        "name": "blobert_type",
-        "type": "dojo_starter::models::types::BlobertTypes"
+        "name": "timestamp_start",
+        "type": "core::integer::u64"
       },
       {
-        "name": "blobert_side_effect",
-        "type": "dojo_starter::models::side_effect::SideEffectType"
+        "name": "timestamp_end",
+        "type": "core::integer::u64"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::blobert::Iblobert",
+    "name": "dojo_starter::models::game::Igame",
     "items": [
       {
         "type": "function",
@@ -282,7 +224,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::blobert::Blobert"
+            "type": "dojo_starter::models::game::Game"
           }
         ],
         "outputs": [],
@@ -292,7 +234,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::blobert::blobert::Event",
+    "name": "dojo_starter::models::game::game::Event",
     "kind": "enum",
     "variants": []
   }

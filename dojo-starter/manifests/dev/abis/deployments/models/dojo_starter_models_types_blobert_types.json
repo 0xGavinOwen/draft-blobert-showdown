@@ -169,66 +169,56 @@
   },
   {
     "type": "impl",
-    "name": "playerImpl",
-    "interface_name": "dojo_starter::models::player::Iplayer"
+    "name": "blobert_typesImpl",
+    "interface_name": "dojo_starter::models::types::Iblobert_types"
+  },
+  {
+    "type": "enum",
+    "name": "dojo_starter::models::types::Type",
+    "variants": [
+      {
+        "name": "Fire",
+        "type": "()"
+      },
+      {
+        "name": "Water",
+        "type": "()"
+      },
+      {
+        "name": "Grass",
+        "type": "()"
+      },
+      {
+        "name": "Wind",
+        "type": "()"
+      },
+      {
+        "name": "Dark",
+        "type": "()"
+      },
+      {
+        "name": "Light",
+        "type": "()"
+      }
+    ]
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::player::Player",
+    "name": "dojo_starter::models::types::BlobertTypes",
     "members": [
       {
-        "name": "address",
-        "type": "core::starknet::contract_address::ContractAddress"
-      },
-      {
-        "name": "blobert_1",
+        "name": "blobert_id",
         "type": "core::integer::u8"
       },
       {
-        "name": "blobert_2",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_3",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_4",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_5",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "blobert_6",
-        "type": "core::integer::u8"
-      },
-      {
-        "name": "name",
-        "type": "core::felt252"
-      },
-      {
-        "name": "total_duels",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "total_wins",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "total_losses",
-        "type": "core::integer::u16"
-      },
-      {
-        "name": "timestamp",
-        "type": "core::integer::u64"
+        "name": "blobert_type",
+        "type": "dojo_starter::models::types::Type"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::player::Iplayer",
+    "name": "dojo_starter::models::types::Iblobert_types",
     "items": [
       {
         "type": "function",
@@ -236,7 +226,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::player::Player"
+            "type": "dojo_starter::models::types::BlobertTypes"
           }
         ],
         "outputs": [],
@@ -246,7 +236,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::player::player::Event",
+    "name": "dojo_starter::models::types::blobert_types::Event",
     "kind": "enum",
     "variants": []
   }

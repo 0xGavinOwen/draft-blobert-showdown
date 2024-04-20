@@ -169,56 +169,26 @@
   },
   {
     "type": "impl",
-    "name": "pokemon_typesImpl",
-    "interface_name": "dojo_starter::models::types::Ipokemon_types"
-  },
-  {
-    "type": "enum",
-    "name": "dojo_starter::models::types::Type",
-    "variants": [
-      {
-        "name": "Fire",
-        "type": "()"
-      },
-      {
-        "name": "Water",
-        "type": "()"
-      },
-      {
-        "name": "Grass",
-        "type": "()"
-      },
-      {
-        "name": "Wind",
-        "type": "()"
-      },
-      {
-        "name": "Dark",
-        "type": "()"
-      },
-      {
-        "name": "Light",
-        "type": "()"
-      }
-    ]
+    "name": "side_effectsImpl",
+    "interface_name": "dojo_starter::models::side_effect::Iside_effects"
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::types::PokemonTypes",
+    "name": "dojo_starter::models::side_effect::SideEffects",
     "members": [
+      {
+        "name": "player_address",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
       {
         "name": "pokemon_id",
         "type": "core::integer::u8"
-      },
-      {
-        "name": "pokemon_type",
-        "type": "dojo_starter::models::types::Type"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::types::Ipokemon_types",
+    "name": "dojo_starter::models::side_effect::Iside_effects",
     "items": [
       {
         "type": "function",
@@ -226,7 +196,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::types::PokemonTypes"
+            "type": "dojo_starter::models::side_effect::SideEffects"
           }
         ],
         "outputs": [],
@@ -236,7 +206,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::types::pokemon_types::Event",
+    "name": "dojo_starter::models::side_effect::side_effects::Event",
     "kind": "enum",
     "variants": []
   }
